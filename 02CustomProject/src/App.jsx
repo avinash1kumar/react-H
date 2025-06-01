@@ -13,7 +13,19 @@ function App() {
     // value not more than 20
     // setCounter(Counter + 1)
     if(Counter < 20){
+      // these all treated all bunch. they all do same work ye sirf 1 hi add kare ga jab v add counter click hoga
       setCounter(Counter + 1)
+      setCounter(Counter + 1)
+      setCounter(Counter + 1)
+      setCounter(Counter + 1)
+// so the useState( )hook has a setCounter function name can be differ but it schedules jobs in batches so all the instructions inside setCounter will be sent once altogether so it sees that all are repeated instructions so its gets executed only once. But in case of call back function syntax inside setCounter it immediately increments the value and when the next time it excutes it agian increments like that then it doesnt works in batches.
+      setCounter(prevCounter => prevCounter + 1) // here prevCounter is callback
+      setCounter(prevCounter => prevCounter + 1)
+      setCounter(prevCounter => prevCounter + 1)
+      setCounter(prevCounter => prevCounter + 1)
+
+
+
     }
   }
 
